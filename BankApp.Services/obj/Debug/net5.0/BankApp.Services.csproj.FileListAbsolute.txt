@@ -1,0 +1,15 @@
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.csproj.AssemblyReference.cache
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.AssemblyInfoInputs.cache
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.AssemblyInfo.cs
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.csproj.CoreCompileInputs.cache
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Services.deps.json
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Services.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\ref\BankApp.Services.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Services.pdb
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Models.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Models.pdb
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.csproj.CopyComplete
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\ref\BankApp.Services.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.pdb

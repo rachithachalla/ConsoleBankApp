@@ -1,0 +1,12 @@
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\bin\Debug\net5.0\BankApp.Models.deps.json
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\bin\Debug\net5.0\BankApp.Models.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\bin\Debug\net5.0\ref\BankApp.Models.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\bin\Debug\net5.0\BankApp.Models.pdb
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\BankApp.Models.csproj.AssemblyReference.cache
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\BankApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\BankApp.Models.AssemblyInfoInputs.cache
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\BankApp.Models.AssemblyInfo.cs
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\BankApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\BankApp.Models.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\ref\BankApp.Models.dll
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Models\obj\Debug\net5.0\BankApp.Models.pdb

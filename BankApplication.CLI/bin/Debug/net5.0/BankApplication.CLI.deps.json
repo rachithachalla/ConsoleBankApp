@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BankApplication.CLI/1.0.0": {
+        "dependencies": {
+          "BankApp.Services": "1.0.0"
+        },
+        "runtime": {
+          "BankApplication.CLI.dll": {}
+        }
+      },
+      "BankApp.Models/1.0.0": {
+        "runtime": {
+          "BankApp.Models.dll": {}
+        }
+      },
+      "BankApp.Services/1.0.0": {
+        "dependencies": {
+          "BankApp.Models": "1.0.0"
+        },
+        "runtime": {
+          "BankApp.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BankApplication.CLI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankApp.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankApp.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
