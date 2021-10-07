@@ -41,6 +41,55 @@ namespace BankApplication.CLI
                             }
                             break;
                         }
+                    case UserOptions.deposite:
+                        {
+                            Console.WriteLine("Enter Account Number: ");
+                            int acNo = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter your pin: ");
+                            int p = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter Amount to deposite: ");
+                            double amt = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine(bankServices.deposit(acNo, p, amt));
+                            break;
+                        }
+                    case UserOptions.witdraw:
+                        {
+                            Console.WriteLine("Enter Account Number: ");
+                            int acNo = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter your pin: ");
+                            int p = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter Amount to withdraw: ");
+                            double amt = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine(bankServices.withdraw(acNo, p, amt));
+                            break;
+                        }
+                    case UserOptions.transferAmount:
+                        {
+                            Console.WriteLine("Enter your Account Number: ");
+                            int sAcNo = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter receiver Account Number: ");
+                            int rAcNo = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter your pin: ");
+                            int p = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter Amount to transfer: ");
+                            double amt = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine(bankServices.transferAmount(sAcNo,rAcNo, p,amt));
+
+                            break;
+                        }
+                    case UserOptions.transactionHistory:
+                        {
+                            Console.WriteLine("Enter your Account Number: ");
+                            int sAcNo = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter your pin: ");
+                            int p = Convert.ToInt32(Console.ReadLine());
+
+                            Console.WriteLine(bankServices.transactionHistory(sAcNo, p));
+                            break;
+                        }
                     case UserOptions.displayAccounts:
                         {
                             foreach (var acc in bankServices.accounts)
@@ -64,6 +113,8 @@ namespace BankApplication.CLI
             createAccount=1,
             deposite,
             witdraw,
+            transferAmount,
+            transactionHistory,
             displayAccounts,
             exit
         }

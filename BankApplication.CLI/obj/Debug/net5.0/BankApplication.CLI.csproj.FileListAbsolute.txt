@@ -18,3 +18,4 @@ C:\Users\Sai\source\repos\RCBankApplication\BankApplication.CLI\obj\Debug\net5.0
 C:\Users\Sai\source\repos\RCBankApplication\BankApplication.CLI\obj\Debug\net5.0\ref\BankApplication.CLI.dll
 C:\Users\Sai\source\repos\RCBankApplication\BankApplication.CLI\obj\Debug\net5.0\BankApplication.CLI.pdb
 C:\Users\Sai\source\repos\RCBankApplication\BankApplication.CLI\obj\Debug\net5.0\BankApplication.CLI.genruntimeconfig.cache
+C:\Users\Sai\source\repos\RCBankApplication\BankApplication.CLI\obj\Debug\net5.0\BankApplication.CLI.csproj.CopyComplete

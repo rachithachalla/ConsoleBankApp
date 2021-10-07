@@ -22,42 +22,5 @@ namespace BankApp.Models
             id = id + 1;
             this.accNo = id;
         }
-        public int getAccNo()
-        {
-            return this.accNo;
-        }
-
-        public bool deposit(double amt)
-        {
-            double prvbal = this.bal;
-            this.bal = this.bal + amt;
-
-            if(this.bal == prvbal + amt)
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
-        }
-
-        public string dispBalance()
-        {
-            return "Your Account Balance is " + this.bal + "Rs";
-        }
-
-        public double withdraw(double amt)
-        {
-            if (this.bal > amt)
-            {
-                this.bal = this.bal - amt;
-                //Console.WriteLine("Withdraw Successfull!!");
-            }
-            else
-            {
-                return 0;
-            }
-            return this.bal;
-        }
     }
 }

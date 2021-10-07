@@ -9,7 +9,7 @@ C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\re
 C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Services.pdb
 C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Models.dll
 C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\bin\Debug\net5.0\BankApp.Models.pdb
-C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.csproj.CopyComplete
 C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.dll
 C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\ref\BankApp.Services.dll
 C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.pdb
+C:\Users\Sai\source\repos\RCBankApplication\BankApp.Services\obj\Debug\net5.0\BankApp.Services.csproj.CopyComplete
