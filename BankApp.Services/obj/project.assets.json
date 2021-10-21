@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "BankApp.Models/1.0.0": {
+      "Technovert.BankApp.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/BankApp.Models.dll": {}
+          "bin/placeholder/Technovert.BankApp.Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BankApp.Models.dll": {}
+          "bin/placeholder/Technovert.BankApp.Models.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "BankApp.Models/1.0.0": {
+    "Technovert.BankApp.Models/1.0.0": {
       "type": "project",
-      "path": "../BankApp.Models/BankApp.Models.csproj",
-      "msbuildProject": "../BankApp.Models/BankApp.Models.csproj"
+      "path": "../BankApp.Models/Technovert.BankApp.Models.csproj",
+      "msbuildProject": "../BankApp.Models/Technovert.BankApp.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "BankApp.Models >= 1.0.0"
+      "Technovert.BankApp.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj",
-      "projectName": "BankApp.Services",
-      "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj",
+      "projectName": "Technovert.BankApp.Services",
+      "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj",
       "packagesPath": "C:\\Users\\Sai\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\obj\\",
       "projectStyle": "PackageReference",
@@ -58,8 +58,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\BankApp.Models.csproj": {
-              "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\BankApp.Models.csproj"
+            "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj": {
+              "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj"
             }
           }
         }

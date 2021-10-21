@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj": {}
+    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj": {}
   },
   "projects": {
     "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj": {
@@ -62,12 +62,12 @@
         }
       }
     },
-    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj": {
+    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj",
-        "projectName": "BankApp.Services",
-        "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj",
+        "projectName": "Technovert.BankApp.Services",
+        "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj",
         "packagesPath": "C:\\Users\\Sai\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\obj\\",
         "projectStyle": "PackageReference",

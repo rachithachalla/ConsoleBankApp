@@ -1,7 +1,7 @@
 ﻿using System;
 using BankApp.Services;
 
-namespace BankApplication.CLI
+namespace Technovert.BankApp.CLI
 {
     class Program
     {

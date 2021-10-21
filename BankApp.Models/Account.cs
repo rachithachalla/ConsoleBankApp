@@ -4,23 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankApp.Models
+namespace Technovert.BankApp.Models
 {
-    public class Account
+    class Account
     {
-        static int id = 0;
+        /*static int id = 0;
         public int accNo;
-        public string accName { get; set; }
-        public int pin { get; set; }
+        public string accName;
+        public int pin;
+        public double bal;*/
 
-        public double bal;
-        
-        
+        static int Id = 0;
+        public string UserId { get; set; }
 
-        public Account()
+        public string Password { get; set; }
+
+        public decimal Balance { get; set; }
+
+        public string Name { get; set; }
+
+        public List<Transaction> Transactions { get; set; }
+
+      
+
+        public Account(string Name,string Password)
+        {
+            Id = Id + 1;
+            this.UserId = Name.Substring(0, 3) + DateTime.Today.ToShortDateString();
+            this.Password = Password;
+            this.Name = Name;
+            this.Balance = 0;
+        }
+       /* public Account()
         {
             id = id + 1;
             this.accNo = id;
-        }
+        }*/
     }
 }

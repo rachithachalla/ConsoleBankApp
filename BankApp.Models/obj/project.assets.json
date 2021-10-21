@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\BankApp.Models.csproj",
-      "projectName": "BankApp.Models",
-      "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\BankApp.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj",
+      "projectName": "Technovert.BankApp.Models",
+      "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj",
       "packagesPath": "C:\\Users\\Sai\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\obj\\",
       "projectStyle": "PackageReference",

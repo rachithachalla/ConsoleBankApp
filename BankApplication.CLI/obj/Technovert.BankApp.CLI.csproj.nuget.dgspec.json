@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj": {}
+    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApplication.CLI\\Technovert.BankApp.CLI.csproj": {}
   },
   "projects": {
     "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj": {
@@ -62,12 +62,12 @@
         }
       }
     },
-    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj": {
+    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj",
-        "projectName": "BankApp.Services",
-        "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\BankApp.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj",
+        "projectName": "Technovert.BankApp.Services",
+        "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj",
         "packagesPath": "C:\\Users\\Sai\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\obj\\",
         "projectStyle": "PackageReference",
@@ -92,6 +92,68 @@
             "projectReferences": {
               "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj": {
                 "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Models\\Technovert.BankApp.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApplication.CLI\\Technovert.BankApp.CLI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApplication.CLI\\Technovert.BankApp.CLI.csproj",
+        "projectName": "Technovert.BankApp.CLI",
+        "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApplication.CLI\\Technovert.BankApp.CLI.csproj",
+        "packagesPath": "C:\\Users\\Sai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApplication.CLI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj": {
+                "projectPath": "C:\\Users\\Sai\\source\\repos\\RCBankApplication\\BankApp.Services\\Technovert.BankApp.Services.csproj"
               }
             }
           }
