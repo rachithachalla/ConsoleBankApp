@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Technovert.BankApp.Models
 {
-    enum TransactionType
+    public enum TransactionType
     {
         Credit,
-        Debit
+        Debit,
+        Revert
     }
 }

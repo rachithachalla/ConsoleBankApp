@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BankApp.Models\BankApp.Models.csproj" />
+    <ProjectReference Include="..\BankApp.Models\Technovert.BankApp.Models.csproj" />
   </ItemGroup>
 
 </Project>

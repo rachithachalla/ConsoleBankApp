@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Technovert.BankApp.Models
+namespace Technovert.BankApp.CLI
 {
-    public enum AccountStatus
+    public enum Services
     {
-        Active,
-        InActive
+        RTGS,
+        IMPS
     }
 }

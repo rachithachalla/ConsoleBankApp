@@ -10,124 +10,164 @@ namespace Technovert.BankApp.Services
 {
     public class BankServices
     {
+        public List<Bank> banks = new List<Bank>();
         public List<Account> accounts = new List<Account>();
         public List<Transaction> transactions = new List<Transaction>();
+        public List<Employee> employees = new List<Employee>();
 
-        public int addAccount(string name, int p)
+
+         public List<Employee> AddEmployee(string Name, string EmployeeId, string Password, string Designation, String ContactNo, String Address)
         {
-            Account acc = new Account
-            {
-                accName = name,
-                pin = p,
-                bal = 0
-            };
+            Employee employee = new Employee(Name, EmployeeId, Password, Designation, ContactNo, Address);
+            this.employees.Add(employee);
+            return employees;
+        }
+
+        public void CreateBank(string name)
+        {
+            Bank bank = new Bank(name);
+            this.banks.Add(bank);
+        }
+
+        public string AddAccount(string name, string password,string contactNo,string address)
+        {
+            Account acc = new Account(name, password,contactNo,address);
             this.accounts.Add(acc);
-            if (acc.accNo != 0)
+            if (acc.UserId != null)
             {
-                return acc.accNo;
+                return acc.UserId;
             }
             else
             {
-                return 0;
+                return "";
             }
 
         }
 
-        public void addTransaction(int sAcNo, int rAcNo, double amt, string ds, string time)
+        public void AddTransaction(string bankId, string sourceAcccountId, string destinationAccountId, decimal previousamount,decimal updatedAmount, TransactionType type)
         {
-            Transaction transaction = new Transaction(sAcNo, rAcNo, amt, ds, time);
+            Transaction transaction = new Transaction(bankId,sourceAcccountId,destinationAccountId,previousamount,updatedAmount,type);
             this.transactions.Add(transaction);
         }
 
-        public string deposit(int acNo, int p, double amt)
+        public string Deposit(string bankId, string accountNo, string password, decimal amt)
         {
-            var acc = this.accounts.Single(x => x.accNo == acNo);
-            if (acc.accNo != 0)
+            //int fl = 0;
+            var account = this.accounts.Single(x => x.UserId == accountNo);
+            if (account is null)
             {
-                if (acc.pin == p)
-                {
-                    double prvbal = acc.bal;
-                    acc.bal = acc.bal + amt;
+                return "Invalid Account Number!!!";
+            }
 
-                    if (acc.bal == prvbal + amt)
+            if (account.Password != password)
+            {
+                return "Invalid Password!!!";
+            }
+            decimal perviousBalance = account.Balance;
+            account.Balance = account.Balance + amt;
+
+            if (account.Balance == perviousBalance + amt)
                     {
-                        addTransaction(acNo, acNo, amt, "deposit", DateTime.Now.ToString("G"));
+                        AddTransaction(bankId,accountNo, accountNo,perviousBalance,account.Balance,TransactionType.Credit);
                         return "Amount is deposited succesfully!!!\n" +
-                            "your balance is: " + acc.bal;
+                            "your balance is: " + account.Balance;
                     }
                     else
                     {
                         return "Amount is not Deposited!!..Try again later..";
                     }
-                }
-                else
-                {
-                    return "Invalid Pin!!!";
-                }
-            }
-            else
-            {
-                return "Invalid Account Number!!!";
-            }
         }
 
-        public string withdraw(int acNo, int p, double amt)
+        public string Withdraw(string bankId,string accountNo, string password, decimal amount)
         {
-            var acc = this.accounts.Single(x => x.accNo == acNo);
+            var account = this.accounts.Single(x => x.UserId == accountNo);
 
-            if (acc is null)
+            if (account is null)
             {
                 return "Invalid Account Number!!!";
             }
 
-            if (acc.pin != p)
+            if (account.Password != password)
             {
                 return "Invalid Pin!!!";
             }
 
-            acc.bal = acc.bal - amt;
-            addTransaction(acNo, acNo, amt, "withdrawn", DateTime.Now.ToString("G"));
-
-            if (acc.accNo != 0)
+            if (account.Balance >= amount)
             {
-                if (acc.pin == p)
-                {
-                    if (acc.bal >= amt)
-                    {
-                        acc.bal = acc.bal - amt;
-                        addTransaction(acNo, acNo, amt, "withdrawn", DateTime.Now.ToString("G"));
-                        return "Withdraw succesfull!!!\n" +
-                            "your balance is: " + acc.bal;
-                    }
-                    else
-                    {
-                        return "Withdraw Unsucessfull!!!...Try Again..";
-                    }
-                }
-                else
-                {
-                    return "Invalid Pin!!!";
-                }
+                account.Balance = account.Balance - amount;
+                AddTransaction(bankId, accountNo, accountNo,account.Balance-amount,account.Balance, TransactionType.Debit);
+                return "Withdraw succesfull!!!\n" +
+                            "your balance is: " + account.Balance;
             }
             else
             {
-                return "Invalid Account Number!!!";
+                return "Withdraw Unsucessfull!!!...Try Again..";
+            }
+
+        }
+        public string UpdateAccount(string accountNo,string name,string contactNo,string address)
+        {
+            var account = this.accounts.Single(x => x.UserId == accountNo);
+            if(account != null)
+            {
+                account.Name = name;
+                account.ContactNo = contactNo;
+                account.Address = address;
+
+                return "Account is updated Successfully!!\n" +
+                    "Account number: " + account.UserId + "\n" +
+                    "Account Holder Name: " + account.Name + "\n" +
+                    "Contact Number: " + account.ContactNo + "\n" +
+                    "Adress: " + account.Address + "\n";
+            } else
+            {
+                return "Account does not exist!!";
             }
         }
 
-        public string transferAmount(int sAccNo, int rAccNo, int p, double amt)
+        public string DeleteAccount(string accountNo)
         {
-            var sAcc = this.accounts.Single(x => x.accNo == sAccNo);
-            var rAcc = this.accounts.Single(x => x.accNo == rAccNo);
-
-            if (sAcc.pin == p)
+            var account = this.accounts.Single(x => x.UserId == accountNo);
+            this.accounts.Remove(account);
+            if(this.accounts.Contains(account))
             {
-                rAcc.bal = rAcc.bal + amt;
-                sAcc.bal = sAcc.bal - amt;
+                return "Account is Not Deleted!!";
+            }
+            return "Account Deleted Successfully";
+        }
 
-                addTransaction(sAccNo, rAccNo, amt, "transfer", DateTime.Now.ToString("G"));
-                return "Amount " + amt + "Rs transferred succesfully to " + rAcc.accName + "\n" +
-                            "your balance is: " + sAcc.bal;
+        public string RevertTransaction(string bankId,string transactionId)
+        {
+            var transaction = this.transactions.Single(x => x.Id == transactionId);
+            var sourceAccount = this.accounts.Single(x => x.UserId == transaction.SourceAcccountId);
+            var destinationAccount = this.accounts.Single(x => x.UserId == transaction.DestinationAccountId);
+            decimal previousAmount = sourceAccount.Balance;
+            if(transaction != null)
+            {
+                sourceAccount.Balance = sourceAccount.Balance + transaction.PreviousAmount - transaction.UpdatedAmount;
+                destinationAccount.Balance = destinationAccount.Balance - (transaction.UpdatedAmount - transaction.PreviousAmount);
+                AddTransaction(bankId, transaction.SourceAcccountId, transaction.DestinationAccountId, previousAmount, sourceAccount.Balance, TransactionType.Revert);
+                return "Transaction is reverted successfully!!!";
+            } else
+            {
+                return "Invalid Transaction Id!!";
+            }
+
+        }
+
+        public string TransferAmount(string bankId,string sourceAccountNo, string destinationAccountNo, string password, decimal amount)
+        {
+            var sourceAccount = this.accounts.Single(x => x.UserId == sourceAccountNo);
+            var destinatonAccount = this.accounts.Single(x => x.UserId == destinationAccountNo);
+
+            if (sourceAccount.Password == password)
+            {
+                destinatonAccount.Balance = destinatonAccount.Balance + amount;
+                sourceAccount.Balance = sourceAccount.Balance - amount;
+
+                AddTransaction(bankId, sourceAccountNo, destinationAccountNo,sourceAccount.Balance -amount,sourceAccount.Balance,TransactionType.Debit);
+                return "Amount " + amount + "Rs transferred succesfully to " + destinatonAccount.Name + "\n" +
+                            "your balance is: " + sourceAccount.Balance;
             }
             else
             {
@@ -136,21 +176,37 @@ namespace Technovert.BankApp.Services
 
         }
 
-        public string transactionHistory(int acNo, int pin)
+        public IEnumerable<Transaction> TransactionHistory(string sourceAccountNo, string password)
         {
-            var trAcc = this.transactions.Where(x => x.sAccNo == acNo).Select(m => new { sourceAccount = m.sAccNo });
-            var acc = this.accounts.Single(x => x.accNo == acNo);
-            if (acc.pin == pin)
+            var transactionAccount = this.transactions.Where(x => x.SourceAcccountId == sourceAccountNo);//.Select(m => new { sourceAccount = m.SourceAcccountId});
+            var acc = this.accounts.Single(x => x.UserId == sourceAccountNo);
+            if (acc.Password == password)
             {
-                return ".......Transaction History......\n" +
-                    "from:        " + trAcc.sAccNo + "\n" +
-                    "to:          " + trAcc.rAccNo + "\n" +
-                    "description: " + trAcc.desc + "\n" +
-                    "time:        " + trAcc.time + "\n";
+                return transactionAccount;
+                /*foreach (var account in transactionAccount) {
+                    return ".......Transaction History......\n" +
+                        "from:        " + account.SourceAcccountId + "\n" +
+                        "to:          " + account.DestinationAccountId + "\n" +
+                        "description: " + account.Type + "\n" +
+                        "time:        " + account.Time + "\n";
+                }*/
             }
             else
             {
-                return "Invalid pin!!!";
+                return null;
+            }
+        }
+        public IEnumerable<Transaction> TransactionHistory(string sourceAccountNo)
+        {
+            var transactionAccount = this.transactions.Where(x => x.SourceAcccountId == sourceAccountNo);
+            var acc = this.accounts.Single(x => x.UserId == sourceAccountNo);
+            if(transactionAccount != null) { 
+                return transactionAccount;
+             
+            }
+            else
+            {
+                return null;
             }
         }
     }

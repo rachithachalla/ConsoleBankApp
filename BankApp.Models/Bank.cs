@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Technovert.BankApp.Models
 {
-    class Bank
+    public class Bank
     {
         public string Id { get; set; }
 
